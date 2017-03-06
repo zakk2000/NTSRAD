@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bootstrap Form Scaffolding</title>
+<link href="/rad/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/rad/resources/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+<body>
+
+<form>
+	<fieldset>
+		<legend>Form Style</legend>
+		<label for="name">Label name</label>
+		<input type="text" id="name" placeholder="Type something…">
+		<span class="help-block">Example block-level help text here.</span>
+		<label class="checkbox" for="checkbox">
+		<input type="checkbox" id="checkbox">Check me out</label>
+		<button type="submit" class="btn">Submit</button>
+	</fieldset>
+</form>
+
+<form class="form-search">
+	<fieldset>
+		<legend>Search Form Style</legend>
+		<input type="text" class="input-medium search-query">
+		<button type="submit" class="btn">Search</button>
+		<div class="input-append">
+			<input type="text" class="span2 search-query">
+			<button type="submit" class="btn">Search</button>
+		</div>
+		<div class="input-prepend">
+			<button type="submit" class="btn">Search</button>
+			<input type="text" class="span2 search-query">
+		</div>
+	</fieldset>
+</form>
+
+<form class="form-inline">
+	<fieldset>
+		<legend>Inline Form Style 1</legend>
+		<label for="email">Label name</label>
+		<input type="text" id="email" class="input-small" placeholder="Email">
+		<legend>Inline Form Style 2</legend>
+		<span class="help-block">Example block-level help text here.</span>
+		<label class="checkbox" for="checkbox">
+		<input type="checkbox" id="checkbox">Check me out</label>
+		<input type="password" class="input-small" placeholder="Password">
+		<label class="checkbox">
+		<input type="checkbox">Remember me</label>
+		<button type="submit" class="btn">Sign in</button>
+	</fieldset>
+</form>
+
+<form class="form-horizontal">
+	
+	<fieldset>
+		<legend>Horizontal Form Style</legend>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Password</label>
+			<div class="controls">
+				<input type="password" id="inputPassword" placeholder="Password"><span class="help-inline">Inline help text</span>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Your Favorite Color</label>
+			<div class="controls">
+				<input type="color" id="color">
+				<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Check Your Option</label>
+			<div class="controls">
+				<label for="option1" class="checkbox inline">
+					<input id="option1" type="checkbox" id="inlineCheckbox1" value="option1"> 1
+				</label>
+				<label for="option2" class="checkbox inline">
+					<input id="option2" type="checkbox" id="inlineCheckbox2" value="option2"> 2
+				</label>
+				<label for="option3" class="checkbox inline">
+					<input id="option3" type="checkbox" id="inlineCheckbox3" value="option3"> 3
+				</label>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Select One Your Option</label>
+			<div class="controls">
+				<label for="optionsRadios1" class="radio">
+					<input id="optionsRadios1" type="radio" name="optionsRadios" value="option1" checked>Option one is this and that—be sure to include why it’s great.
+				</label>
+				<label for="optionsRadios2" class="radio">
+					<input id="optionsRadios2" type="radio" name="optionsRadios" value="option2">Option two can be something else, and selecting it will deselect option one
+				</label>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="singleSelect">Your Single Select</label>
+			<div class="controls">
+				<select id="singleSelect">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="multipleSelect">Your Multiple Select</label>
+			<div class="controls">
+				<select id="multipleSelect" multiple="multiple">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="multipleSelect">Block Size Input</label>
+			<div class="controls">
+				<input class="input-block-level" type="text" placeholder=".input-block-level">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Various Size Input</label>
+			<div class="controls">
+				<input class="input-mini" type="text" placeholder=".input-mini">
+				<input class="input-small" type="text" placeholder=".input-small">
+				<input class="input-medium" type="text" placeholder=".input-medium">
+				<input class="input-large" type="text" placeholder=".input-large">
+				<input class="input-xlarge" type="text" placeholder=".input-xlarge">
+				<input class="input-xxlarge" type="text" placeholder=".input-xxlarge">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Various Size Input Using .span Class</label>
+			<div class="controls">
+				<input class="span1" type="text" placeholder=".span1">
+				<input class="span2" type="text" placeholder=".span2">
+				<input class="span3" type="text" placeholder=".span3">
+				<select class="span1">
+				...
+				</select>
+				<select class="span2">
+				...
+				</select>
+				<select class="span3">
+				...
+				</select>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Various Size Input by One Line</label>
+			<div class="controls">
+				<input class="span5" type="text" placeholder=".span5">
+			</div>
+			<div class="controls controls-row">
+				<input class="span4" type="text" placeholder=".span4">
+				<input class="span1" type="text" placeholder=".span1">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Uneditable Input</label>
+			<div class="controls">
+				<span class="input-xlarge uneditable-input">Some value here</span>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Disabled Input</label>
+			<div class="controls">
+				<input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputEmail">Email</label>
+			<div class="controls">
+				<input type="text" id="inputEmail" placeholder="Email">
+				<div class="input-prepend">
+					<span class="add-on">@</span>
+					<!-- <input class="span2" id="prependedInput" type="text" placeholder="Username"> -->
+					<select id="prependedSelect" class="span2">
+						<option>naver.com</option>
+						<option>daum.net</option>
+						<option>gmail.com</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="appendedInput">Your Site</label>
+			<div class="controls">
+				<div class="input-append">
+					<input class="span2" id="appendedInput" type="text">
+					<span class="add-on">.com</span>
+				</div>
+				<div class="input-prepend input-append">
+					<span class="add-on">$</span>
+						<input class="span2" id="appendedPrependedInput" type="text">
+					<span class="add-on">.00</span>
+				</div>
+				<div class="input-append">
+					<input class="span2" id="appendedInputButtons" type="text">
+					<button class="btn" type="button">Search</button>
+					<button class="btn" type="button">Options</button>
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="contents">Your Contents</label>
+			<div class="controls">
+				<textarea rows="3"></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<label class="checkbox">
+					<input type="checkbox"> Remember me
+				</label>
+				<button type="submit" class="btn">Sign in</button>
+			</div>
+		</div>
+		<div class="form-actions">
+			<button type="submit" class="btn btn-primary">Save changes</button>
+			<button type="button" class="btn">Cancel</button>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Status Verification</legend>
+		<div class="control-group warning">
+			<label class="control-label" for="inputWarning">Input with warning</label>
+			<div class="controls">
+				<input type="text" id="inputWarning">
+				<span class="help-inline">Something may have gone wrong</span>
+			</div>
+		</div>
+		<div class="control-group error">
+			<label class="control-label" for="inputError">Input with error</label>
+			<div class="controls">
+				<input type="text" id="inputError">
+				<span class="help-inline">Please correct the error</span>
+			</div>
+		</div>
+		<div class="control-group info">
+			<label class="control-label" for="inputInfo">Input with Info</label>
+			<div class="controls">
+				<input type="text" id="inputInfo">
+				<span class="help-inline">Username is taken</span>
+			</div>
+		</div>
+		<div class="control-group success">
+			<label class="control-label" for="inputSuccess">Input with success</label>
+			<div class="controls">
+				<input type="text" id="inputSuccess">
+				<span class="help-inline">Woohoo!</span>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Button Type</legend>
+		<button class="btn" type="button">Normal Button</button>
+		<button class="btn btn-primary" type="button">Primary</button>
+		<button class="btn btn-info" type="button">Info</button>
+		<button class="btn btn-success" type="button">Success</button>
+		<button class="btn btn-warning" type="button">Warning</button>
+		<button class="btn btn-danger" type="button">Danger</button>
+		<button class="btn btn-inverse" type="button">Inverse</button>
+		<button class="btn btn-link" type="button">Link</button>
+	</fieldset>
+	<fieldset>
+		<legend>Button Size</legend>
+		<p>
+			<button class="btn btn-large btn-primary" type="button">Large button</button>
+			<button class="btn btn-large" type="button">Large button</button>
+		</p>
+		<p>
+			<button class="btn btn-primary" type="button">Default button</button>
+			<button class="btn" type="button">Default button</button>
+		</p>
+		<p>
+			<button class="btn btn-small btn-primary" type="button">Small button</button>
+			<button class="btn btn-small" type="button">Small button</button>
+		</p>
+		<p>
+			<button class="btn btn-mini btn-primary" type="button">Mini button</button>
+			<button class="btn btn-mini" type="button">Mini button</button>
+		</p>
+		<p>
+			<button class="btn btn-large btn-block btn-primary" type="button">Block level button</button>
+			<button class="btn btn-large btn-block" type="button">Block level button</button>
+		</p>
+		<p>
+			<button type="button" class="btn btn-large btn-primary disabled" disabled="disabled">Primary button</button>
+			<button type="button" class="btn btn-large" disabled>Button</button>
+		</p>
+	</fieldset>
+	<fieldset>
+		<legend>Anchor Tag Button</legend>
+		<a href="#" class="btn btn-large btn-primary disabled">Primary link</a>
+		<a href="#" class="btn btn-large disabled">Link</a>
+	</fieldset>
+	<fieldset>
+		<legend>Image</legend>
+		<img src="../../images/album-mg.jpg" class="img-rounded">
+		<img src="../../images/album-mg.jpg" class="img-circle">
+		<img src="../../images/album-mg.jpg" class="img-polaroid">
+	</fieldset>
+	<fieldset>
+		<legend>Icon by GLYPHICONS</legend>
+		<i class="icon-edit"></i>
+		<i class="icon-edit icon-white"></i>
+	</fieldset>
+	<fieldset>
+		<legend>Button Group Icon by GLYPHICONS</legend>
+		<div class="btn-toolbar">
+			<div class="btn-group">
+				<a class="btn" href="#"><i class="icon-align-left"></i></a>
+				<a class="btn" href="#"><i class="icon-align-center"></i></a>
+				<a class="btn" href="#"><i class="icon-align-right"></i></a>
+				<a class="btn" href="#"><i class="icon-align-justify"></i></a>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Navigation Icon by GLYPHICONS</legend>
+		<ul class="nav nav-list">
+			<li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+			<li><a href="#"><i class="icon-book"></i> Library</a></li>
+			<li><a href="#"><i class="icon-pencil"></i> Applications</a></li>
+			<li><a href="#"><i class="i"></i> Misc</a></li>
+		</ul>
+	</fieldset>
+
+</form>
+
+<script src="/rad/resources/jquery/jquery-1.11.2.js"></script>
+<script src="/rad/resources/bootstrap/js/bootstrap.js"></script>
+
+</body>
+</html>

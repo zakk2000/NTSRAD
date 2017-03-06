@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>HTML5 Application Cache</title>
+<link rel="stylesheet" type="text/css" href="/resources/css/base.css">
+</head>
+<body>
+
+<div class='box'>Hello, Application Cache !</div>     
+<img src="/resources/images/offline.png">
+<img src="/resources/images/online.png">
+
+<script type="text/javascript">
+
+function startPage() {
+	
+	if (window.applicationCache) {
+		
+		alert("어플리케이션 캐시를 지원");
+	
+	} else {
+		
+		alert("어플리케이션 캐시를 미지원");
+	
+	}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html manifest="/rad/resources/manifest/mobile.manifest">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Web Storage</title>
+<link rel="stylesheet" type="text/css" href="/rad/resources/css/basic.css" charset="UTF-8">
+</head>
+<body onload="startPage()">
+
+<h3>Local Storage</h3>
+<button onclick="saveLocalStorage()">저장</button>
+<input id="text1" type="text" />
+
+<br>
+<button onclick="readLocalStorage()">조회</button>
+<span id="span1"></span>
+
+<br>
+<h3>Session Storage</h3>
+<button onclick="saveSessionStorage()">저장</button>
+<input id="text2" type="text" />
+
+<br>
+<button onclick="readSessionStorage()">조회</button>
+<span id="span2"></span>
+
+<img src="/rad/resources/image/offline.png">
+<img src="/rad/resources/image/online.png">
+
+<script type="text/javascript">
+
+function saveLocalStorage() {
+	
+	if (window.localStorage) {
+		
+		var text1 = document.querySelector("#text1");
+		window.localStorage.setItem("text1", text1.value);
+	
+	}
+
+}
+
+function readLocalStorage() {
+	
+	if (window.localStorage) {
+		
+		var value = window.localStorage.getItem("text1");
+		var span1 = document.querySelector("#span1");
+		span1.innerHTML = value;
+	
+	}
+
+}
+
+function saveSessionStorage() {
+	
+	if (window.sessionStorage) {
+		
+		var text2 = document.querySelector("#text2");
+		window.sessionStorage.setItem("text2", text2.value);
+	
+	}
+
+}
+
+function readSessionStorage() {
+	
+	if (window.sessionStorage) {
+		
+		var value = window.sessionStorage.getItem("text2");
+		var span2 = document.querySelector("#span2");
+		span2.innerHTML = value;
+	
+	}
+
+}
+
+function startPage() {
+	
+	if (window.applicationCache) {
+		
+		alert("애플리케이션 캐시 지원");
+	
+	} else {
+		
+		alert("애플리케이션 캐시 미지원");
+	
+	}
+
+}
+
+</script>
+<script src="/rad/resources/jquery/jquery-1.11.2.js"></script>
+
+</body>
+</html>

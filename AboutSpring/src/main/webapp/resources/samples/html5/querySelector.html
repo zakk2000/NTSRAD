@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>HTML5 Query Selector</title>
+<script type="text/javascript">
+
+function fun1() {
+	
+	var firstDiv = document.querySelector("#firstDiv");
+	firstDiv.innerHTML = "변경된 DIV 내용";
+
+}
+
+function fun2() {
+	
+	var array = document.querySelectorAll("#secondDiv input:checked");
+	for (var i = 0; i < array.length; i++) {
+		
+		console.log(array[i].value);
+	
+	}
+
+}
+
+</script>
+</head>
+<body>
+
+<div id="firstDiv" style="background-color:#ffff00">DIV 내용</div>
+
+<form id="secondDiv">
+	
+	<input type="checkbox" name="framework" value="jquerymobile"/>jQuery Mobile <br/>
+	<input type="checkbox" name="framework" value="senchatouch1"/>Sencha Touch 1 <br/>
+	<input type="checkbox" name="framework" value="senchatouch2"/>Sencha Touch 2
+
+</form>
+
+<button onclick="fun1()">div 찾기</button>
+<button onclick="fun2()">check 찾기</button>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+CACHE MANIFEST
+
+CACHE:
+/resources/css/base.css
+/resources/images/offline.png
+
+NETWORK:
+*
+
+FALLBACK:

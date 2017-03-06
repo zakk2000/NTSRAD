@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bootstrap Scaffolding</title>
+<link href="/rad/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/rad/resources/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!--
+	고정 너비의 레이아웃을 중앙에 위치시키고자 할 때에는 container 클래스를 사용하고,
+	반응형 웹 페이지를 위해서는 container-fluid 클래스를 사용
+-->
+<div class="container">
+	
+	<!-- 기본 그리드를 사용하기 위해서는 <div>요소에 row 클래스를 지정 -->
+	<div class="row">
+		<p>Default Grid System : 반응형으로 기본 생성되는 12 개 열을 이용하여 하위 &lt;div&gt; 요소에 span* 클래스를 지정한 컨테이너를 생성</p>
+		<div class="span4">4 Columns Merged</div>
+		<div class="span8">8 Columns Merged</div>
+	</div>
+	<br>
+	<br>
+	<div class="row">
+		<p>Offset Column : 기본 12 개의 열 범위 내에서 span* 클래스와 offset* 클래스를 사용하여 오른쪽으로 열을 이동</p>
+		<div class="span4">4 Columns Merged</div>
+		<div class="span6 offset2">8 Columns Merged</div>
+	</div>
+	<br>
+	<br>
+	<div class="row">
+		<div class="span9">
+			<p>Nesting Column : 부모 컨테이너의 span 개수만큼 하위 컨테이너에 span*을 지정</p>
+			<div class="row">
+				<div class="span3">Child 3 Nesting Columns</div>
+				<div class="span6">Child 6 Nesting Columns</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	※ row-fluid 클래스를 지정하면 반응형 그리드를 작성할 수 있음
+	<div class="row-fluid">
+		<p>Responsive Fluid Grid System : 반응형 가변적 그리드</p>
+		<div class="span4">4 Columns Merged</div>
+		<div class="span4">4 Columns Merged</div>
+	</div>
+	<div class="row-fluid">
+		<p>Responsive Fluid Grid System : 반응형 가변적 그리드에 offset 지정</p>
+		<div class="span4">4 Columns Merged</div>
+		<div class="span4 offset2">4 Columns Merged</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span8">
+			<p>Responsive Fluid Nesting Column Grid System : 반응형 가변적 그리드에 하위 컨테이너를 중첩시키고자 하는 경우 부모 열의 개수와 상관없이 12 개를 기준으로 하위 열의 개수를 지정</p>
+			<div class="span6">Child 6 Fluid Nesting Columns</div>
+			<div class="span6">Child 6 Fluid Nesting Columns</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<h1>Heading 1</h1>
+	<h2>Heading 2</h2>
+	<h3>
+		Heading 3
+		<small>
+			<ul>
+				<li>This is a subheading.</li>
+			</ul>
+			<ul class="unstyled"">
+				<li>This is a unstyled subheading.</li>
+			</ul>
+		</small>
+	</h3>
+	<h4>Heading 4</h4>
+	<h5>Heading 5</h5>
+	<h6>Heading 6</h6>
+	<h7>Heading 7</h7>
+	<br>
+	<br>
+	<p class="lead">특정 Paragraph 강조</p>
+	<small>
+		<strong>Bacon ipsum dolor</strong> sit amet tri-tip pork loin ball tip frankfurter swine boudin meatloaf shoulder short ribs cow drumstick beef jowl.
+		Meatball chicken sausage tail, <strong>kielbasa strip steak turducken venison</strong> prosciutto.
+		Chuck filet mignon tri-tip ribeye, flank brisket leberkas.
+		<em>Swine turducken turkey shank, hamburger beef ribs bresaola pastrami venison rump.</em>
+	</small>
+	<br>
+	<br>
+	<p class="muted">This content is muted</p>
+	<p class="text-warning">This content carries a warning class</p>
+	<p class="text-error">This content carries an error class</p>
+	<p class="text-info">This content carries an info class</p>
+	<p class="text-success">This content carries a success class</p>
+	<p>This content has <em>emphasis</em>, and can be <strong>bold</strong></p>
+	<br>
+	<br>
+	<abbr title="Real Simple Syndication">RSS</abbr>
+	<br>
+	<abbr title="약어 또는 약자를 마크업하면 브라우저나 철자법 검사 프로그램, 번역 시스템, 검색 엔진에 유용한 정보를 보낼 수 있습니다.">That joke had me ROTFLOL</abbr>
+	<br>
+	<br>
+	&lt;address&gt; 요소는 스크린 리더(시각 장애인이 컴퓨터 화면에 출력되는 내용을 알 수 있도록 음성으로 읽어 주는 프로그램)나 검색 엔진이 글에 있는 실제 주소와 전화번호를 찾는 것을 도와줄 수 있습니다.
+	<address>
+		<strong>O’Reilly Media, Inc.</strong>
+		<br>
+		1005 Gravenstein HWY North
+		<br>
+		Sebastopol, CA 95472
+		<br>
+		<abbr title="Phone">P:</abbr> <a href="tel:+17078277000">(707) 827-7000</a>
+	</address>
+	<address>
+		<strong>Jake Spurlock</strong>
+		<br>
+		<a href="mailto:#">flast@oreilly.com</a>
+	</address>
+	<br>
+	<br>
+	<blockquote>
+		<p>Quotation(인용) Tag</p>
+		<p>That this is needed, desperately needed, is indicated by the
+		incredible uptake of Bootstrap. I use it in all the server software
+		I’m working on. And it shows through in the templating language I’m
+		developing, so everyone who uses it will find it’s “just there" and
+		works, any time you want to do a Bootstrap technique. Nothing to do,
+		no libraries to include. It’s as if it were part of the hardware.
+		Same approach that Apple took with the Mac OS in 1984.</p>
+		<small>Developer of RSS, <cite title="Source Title">Dave Winer</cite></small>
+	</blockquote>
+	<blockquote class="pull-right">
+		<p>오른쪽 정렬 Quotation Tag</p>
+		<p>That this is needed, desperately needed, is indicated by the
+		incredible uptake of Bootstrap. I use it in all the server software
+		I’m working on. And it shows through in the templating language I’m
+		developing, so everyone who uses it will find it’s “just there" and
+		works, any time you want to do a Bootstrap technique. Nothing to do,
+		no libraries to include. It’s as if it were part of the hardware.
+		Same approach that Apple took with the Mac OS in 1984.</p>
+		<small>Developer of RSS, <cite title="Source Title">Dave Winer</cite></small>
+	</blockquote>
+	<br>
+	<br>
+	<h3>Unordered List(일반 목록) Tag</h3>
+	<ul>
+		<li>Backpacking in Yosemite</li>
+		<li>Hiking in Arches
+			<ul>
+				<li>Delicate Arch</li>
+				<li>Park Avenue</li>
+			</ul>
+		</li>
+		<li>Biking the Flintstones Trail</li>
+	</ul>
+	<br>
+	<br>
+	<h3>Ordered List(순서 목록)</h3>
+	<ol>
+		<li>Turn off the internet.</li>
+		<li>Write the book.</li>
+		<li>... Profit?</li>
+	</ol>
+	<br>
+	<br>
+	<h3>Common Electronics Parts(용어 목록1)</h3>
+	<dl>
+		<dt>LED</dt>
+		<dd>A light-emitting diode (LED) is a semiconductor light source.</dd>
+		<dt>Servo</dt>
+		<dd>Servos are small, cheap, mass-produced actuators used for radio control and small robotics.</dd>
+	</dl>
+	<h3>Common Electronics Parts(용어 목록2)</h3>
+	<dl class="dl-horizontal">
+		<dt>LED</dt>
+		<dd>A light-emitting diode (LED) is a semiconductor light source.</dd>
+		<dt>Servo</dt>
+		<dd>Servos are small, cheap, mass-produced actuators used for radio control and small robotics.</dd>
+	</dl>
+	<br>
+	<br>
+	<h3>Code</h3>
+	<p>Instead of always using divs, in HTML5, you can use new elements like <code>&lt;section&gt;</code>, <code>&lt;header&gt;</code>
+	and <code>&lt;footer&gt;</code>. The html should look something like this:</p>
+	<pre>
+		&lt;article&gt;
+		&lt;h1&gt;Article Heading&lt;/h1&gt;
+		&lt;/article&gt;
+	</pre>
+	<br>
+	<br>
+	<h3>기본 .table class의 Table</h3>
+	<table class="table">
+		<caption>Test Caption Test Caption Test Caption Test Caption</caption>
+		<thead>
+			<tr>
+				<th>Th 1</th>
+				<th>Th 2</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>TD 1</td>
+				<td>TD 2</td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>.table-striped class의 Table</h3>
+	<table class="table table-striped">
+		<caption>Test Caption Test Caption Test Caption Test Caption</caption>
+		<thead>
+			<tr>
+				<th>Th 1</th>
+				<th>Th 2</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>TD 1</td>
+				<td>TD 2</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+
+<script src="/rad/resources/jquery/jquery-1.11.2.js"></script>
+<script src="/rad/resources/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

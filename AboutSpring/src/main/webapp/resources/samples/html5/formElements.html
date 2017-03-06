@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>HTML5 Form Style</title>
+</head>
+<body>
+
+<br>
+<br>
+<br>
+
+<div align="center">
+
+<form name="frm" method="post">
+<!-- <form name="frm" method="post" novalidate> -->
+	
+	<input type="date" min="2015-01-01" max="2015-12-31" step="1" value="2015-02-15" required />
+	<br>
+	<input type="range" min="0" max="100" step="1" value="50" required />
+	<br>
+	<input type="number" min="0" max="100" step="1" value="50" required />
+	<br>
+	<br>
+	<input type="search" />
+	<input type="text" autofocus required pattern="(010|011)-\d{3,4}-\d{4}" />
+	<input type="url" />
+	<input type="email" placeholder="Please enter your email" required />
+	<br>
+	<br>
+	<input type="submit" value="등록" />
+	
+
+</form>
+
+</div>
+
+</body>
+</html>

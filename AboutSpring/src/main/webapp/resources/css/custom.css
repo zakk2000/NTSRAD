@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+.nav-glyphish-example .ui-btn .ui-btn-inner {
+	padding-top: 40px;
+}
+
+.nav-glyphish-example .ui-btn .ui-icon {
+	width: 30px;
+	height: 30px;
+	margin-left: -15px;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+#chat .ui-icon {
+	background: url(/mobile/resources/jquery/images/custom/09-chat2.png) 50% 50% no-repeat;
+	background-size: 24px 22px;
+}
+
+#email .ui-icon {
+	background: url(/mobile/resources/jquery/images/custom/18-envelope.png) 50% 50% no-repeat;
+	background-size: 24px 16px;
+}
+
+#login .ui-icon {
+	background: url(/mobile/resources/jquery/images/custom/30-key.png) 50% 50% no-repeat;
+	background-size: 12px 26px;
+}
+
+#beer .ui-icon {
+	background: url(/mobile/resources/jquery/images/custom/88-beermug.png) 50% 50% no-repeat;
+	background-size: 22px 27px;
+}
+
+#coffee .ui-icon {
+	background: url(/mobile/resources/jquery/images/custom/100-coffee.png) 50% 50% no-repeat;
+	background-size: 18px 18px;
+}
+
+#skull .ui-icon {
+	background: url(/mobile/resources/jquery/images/custom/21-skull.png) 50% 50% no-repeat;
+	background-size: 22px 24px;
+}

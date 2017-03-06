@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link href="/rad/resources/jquerymobile/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div data-role="page">
+	
+	<div data-role="header">	    
+		<h1>HTML5 Field</h1>
+	</div>
+	
+	<div data-role="content">
+		
+		<form id="joinForm" method="post" action="#">
+			
+			<div data-role="fieldcontain">
+				<label for="age">Number:</label>
+				<input id="age" type="number" name="age" min="1"  max="150" value="20" />
+			</div>
+			
+			<div data-role="fieldcontain">
+				<label for="email">Email:</label>
+				<input id="email" type="email" name="email" value=""  />
+			</div>
+			
+			<div data-role="fieldcontain">
+				<label for="homepage">Url:</label>
+				<input id="homepage" type="url" name="homepage"  value=""  />
+			</div>
+			
+			<div data-role="fieldcontain">
+				<label for="tel">Tel:</label>
+				<input id="tel"  type="tel" name="tel" value=""/>
+			</div>
+			
+			<div data-role="fieldcontain">
+				<label for="amount">Range:</label>
+				<input id="amount" type="range" name="amount" min="0" max="100" value="50" data-theme="e" data-track-theme="b"/>
+			</div>
+			
+			<div data-role="fieldcontain">
+				<label for="phoneKind">Select:</label>
+				<select id="phoneKind" name="phoneKind" data-native-menu="false" data-icon="gear" data-overlay-theme="b" data-theme="b">
+					<option value="아이폰4">아이폰4</option>
+					<option value="아이폰4S">아이폰4S</option>
+					<option value="갤럭시S" selected>갤럭시S</option>
+					<option value="갤럭시S2">갤럭시S2</option>
+				</select>
+			</div>
+			
+			<div  data-role="fieldcontain">
+				<fieldset data-role="controlgroup" data-type="horizontal">
+					<legend>Hobby:</legend>
+					<input id="hobby1" type="checkbox" name="hobby" data-theme="b" />
+					<label for="hobby1">축구</label>
+					<input id="hobby2" type="checkbox" name="hobby" checked/>
+					<label for="hobby2">농구</label>
+					<input id="hobby3" type="checkbox" name="hobby"/>
+					<label for="hobby3">야구</label>
+				</fieldset>
+			</div>
+			
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup" data-type="horizontal">
+					<legend>Job:</legend>
+					<input id="radio1" type="radio" name="job" data-theme="b" />
+					<label for="radio1">개발자</label>
+					<input id="radio2"  type="radio" name="job" checked="checked"/>
+					<label for="radio2">디자이너</label>
+				</fieldset>
+			</div>
+			
+			<div data-role="fieldcontain">
+				<label for="flipToggle">Flip Toggle:</label>
+				<select id="flipToggle" name="flipToggle" data-role="slider" data-theme="e" data-track-theme="e">
+					<option value="off">Off</option>
+					<option value="on" selected>On</option>
+				</select>
+			</div>
+		
+		</form>
+	
+	</div>
+
+</div>
+
+<script src="/rad/resources/jquery/jquery-1.11.2.js"></script>
+<script src="/rad/resources/jquerymobile/jquery.mobile-1.4.5.js"></script>
+
+</body>
+</html>

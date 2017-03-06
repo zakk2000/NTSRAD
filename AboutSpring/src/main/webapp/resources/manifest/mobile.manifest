@@ -1,0 +1,14 @@
+CACHE MANIFEST
+
+#캐쉬 대상
+CACHE:
+/mobile/resources/css/basic.css
+/mobile/resources/jquery/jquery-1.11.1.min.js
+/mobile/resources/image/offline.png
+
+#다른 리소스 파일은 서버에서 받음
+NETWORK:
+*
+
+FALLBACK:
+a.html fallback/fallback.html

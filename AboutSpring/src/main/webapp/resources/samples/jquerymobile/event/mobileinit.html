@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link href="/rad/resources/jquerymobile/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div id="home" data-role="page">
+	
+	<div data-role="header">
+		<h1>홈 페이지</h1>
+	</div>
+	
+	<div data-role="content">	
+		<a href="mobileinit.jsp" data-role="button">Second Page</a>
+	</div>
+
+</div>
+
+<script src="/rad/resources/jquery/jquery-1.11.2.js"></script>
+<script>
+$(document).on("mobileinit", function() {
+	$.mobile.defaultPageTransition = 'slide';
+	$.mobile.loadingMessage = '페이지 로딩 중입니다';
+	$.mobile.pageLoadErrorMessage = '오류가 발생하였습니다';
+	
+	$(document).on("pagebeforeload", function(event, data) {
+		console.log("pagebeforeload--------------");
+		console.log("url:" + data.url);
+		console.log("absUrl:" + data.absUrl);
+		console.log("dataUrl:" + data.dataUrl);
+	});
+	$(document).on("pageload", function(event, data) {
+		console.log("pageload-------------------");
+		console.log("absUrl:" + data.absUrl);
+		console.log("dataUrl:" + data.dataUrl);
+	});
+	$(document).on("pageloadfailed", function(event, data) {
+		console.log("pageloadfailed-----------------");
+		console.log("absUrl:" + data.absUrl);
+		console.log("dataUrl:" + data.dataUrl);
+		$.mobile.changePage("error.html", {
+			transition: 'slideup',
+			reverse: true
+		});
+	});
+});
+</script>
+<script src="/rad/resources/jquerymobile/jquery.mobile-1.4.5.js"></script>
+
+</body>
+</html>

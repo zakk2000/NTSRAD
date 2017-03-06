@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link href="/rad/resources/jquerymobile/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css">
+<title>Insert title here</title>
+</head>
+
+<body>
+
+<div id="home" data-role="page">
+	
+	<div data-role="header">
+		<h1>Header</h1>
+	</div>
+	
+	<div data-role="content" style="padding:0px">
+		<img id="backImg" src="" />
+	</div>
+
+</div>
+
+<script src="/rad/resources/jquery/jquery-1.11.2.js"></script>
+<script src="/rad/resources/jquerymobile/jquery.mobile-1.4.5.js"></script>
+<script type="text/javascript">
+
+$(function() {
+	
+	if (window.orientation == 0) {
+		
+		$('#backImg').attr('src', '../../images/big-image-portrait.png');
+	
+	} else {
+		
+		$('#backImg').attr('src', '../../images/big-image-landscape.png');
+	
+	}
+	
+	$(window).bind('orientationchange', function(event) {
+		
+		if (event.orientation == 'portrait') {
+			
+			$('#backImg').attr('src', '../../images/big-image-portrait.png');
+		
+		} else {
+			
+			$('#backImg').attr('src', '../../images/big-image-landscape.png');
+		
+		}
+	
+	});
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link href="/rad/resources/jquerymobile/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css">
+<title>Insert title here</title>
+</head>
+
+<body>
+
+<div id="orangePage" data-role="page">
+	<div data-role="header">
+		<h1>오랜지 페이지</h1>
+	</div>
+	<div id="orangeDiv" data-role="content" style="background-color:orange; height:500px"></div>
+	<hr>
+	<div id="infoDiv"></div>
+</div>
+
+<div id="bluePage" data-role="page">
+	<div data-role="header">
+		<h1>블루 페이지</h1>
+	</div>
+	<div id="blueDiv" data-role="content" style="background-color:blue; height:500px"></div>
+	<hr>
+	<div id="infoDiv"></div>
+</div>
+
+<div id="greenPage" data-role="page">
+	<div data-role="header">
+		<h1>그린 페이지</h1>
+	</div>
+	<div id="greenDiv" data-role="content" style="background-color:green; height:500px"></div>
+	<hr>
+	<div id="infoDiv"></div>
+</div>
+
+<script src="/rad/resources/jquery/jquery-1.11.2.js"></script>
+<script src="/rad/resources/jquerymobile/jquery.mobile-1.4.5.js"></script>
+<script type="text/javascript">
+
+$(function() {
+	
+	$('#orangeDiv').on('swipeleft', function(event) {
+		
+		$.mobile.changePage('#bluePage', {transition:'slide'});
+	
+	});
+	
+	$('#orangeDiv').on('swiperight', function(event) {
+		
+		$.mobile.changePage('#greenPage', {transition:'slide', reverse:true});
+	
+	});
+	
+	$('#blueDiv').on('swipeleft', function(event) {
+		
+		$.mobile.changePage('#greenPage', {transition:'slide'});
+	
+	});
+	
+	$('#blueDiv').on('swiperight', function(event) {
+		
+		$.mobile.changePage('#orangePage', {transition:'slide', reverse:true});
+	
+	});
+	
+	$('#greenDiv').on('swipeleft', function(event) {
+		
+		$.mobile.changePage('#orangePage', {transition:'slide'});
+	
+	});
+	
+	$('#greenDiv').on('swiperight', function(event) {
+		
+		$.mobile.changePage('#bluePage', {transition:'slide', reverse:true});
+	
+	});
+
+});
+
+</script>
+
+</body>
+</html>

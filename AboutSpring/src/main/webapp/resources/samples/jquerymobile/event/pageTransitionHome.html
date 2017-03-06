@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link href="/rad/resources/jquerymobile/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css">
+<title>Insert title here</title>
+</head>
+
+<body>
+
+<div id="home" data-role="page">
+	
+	<div data-role="header">
+		<h1>Header</h1>
+	</div>
+	
+	<div data-role="content">	
+		<a href="pageTransitionSecond.html" data-role="button">Second Page</a>
+		<a href="pageTransitionThird.html" data-role="button">Third Page</a>
+		<div id="info"></div>
+	</div>
+
+</div>
+
+<script src="/rad/resources/jquery/jquery-1.11.2.js"></script>
+<script type="text/javascript">
+
+$(document).bind('mobileinit', function() {
+	
+	$(document).on('pagebeforeshow', '#home', function(event, ui) {
+		console.log('home:pagebeforeshow ================>');
+	});
+	
+	$(document).on('pageshow', '#home', function(event, ui) {
+		console.log('home:pageshow ================>');
+		
+		if (ui.prevPage.attr('id') == 'secondPage')
+			
+			$('#info').append('Second Page에서 이동되었습니다.<br>');
+		
+		else if (ui.prevPage.attr('id') == 'thirdPage')
+			
+			$('#info').append('Third Page에서 이동되었습니다.<br>');
+	});
+	
+	$(document).on('pagebeforehide', '#home', function(event, ui) {
+		console.log('home:pagebeforehide ================>');
+	});
+	
+	$(document).on('pagehide', '#home', function(event, ui) {
+		console.log('home:pagehide ================>');
+		console.log(ui.nextPage);
+	});
+	
+	$(document).on('pagebeforeshow', '#secondPage', function(event, ui) {
+		console.log('secondPage:pagebeforeshow ================>');
+	});
+	
+	$(document).on('pageshow', '#secondPage', function(event, ui) {
+		console.log('secondPage:pageshow ================>');
+		console.log(ui.prevPage);
+	});
+	
+	$(document).on('pagebeforehide', '#secondPage', function(event, ui) {
+		console.log('secondPage:pagebeforehide ================>');
+	});
+	
+	$(document).on('pagehide', '#secondPage', function(event, ui) {
+		console.log('secondPage:pagehide ================>');
+	});
+
+});
+
+</script>
+<script src="/rad/resources/jquerymobile/jquery.mobile-1.4.5.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link href="/rad/resources/jquerymobile/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div id="home" data-role="page">
+	
+	<div data-role="header">
+		<h1>홈 페이지</h1>
+	</div>
+	
+	<div data-role="content">	
+		<a href="http://m.sea-doo.com" data-role="button">다른 도메인 웹앱</a>
+		<a href="form.html" data-role="button" data-ajax="false">동일 도메인 웹앱</a>
+		<a href="mailto:blueskii@naver.com" data-role="button">Email Link</a>
+		<a href="tel:010-123-1234" data-role="button">Phone Link</a>
+		<a href="geo:37.480349,126.882507?z=16" data-role="button">Maps Link</a>
+		<p><a href="javascript:showMap(37.480349,126.882507);" data-role="button">Map Link</a></p>
+		<div id="mapView"></div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+
+function showMap(a, b) {
+	
+	var latlng = new google.maps.LatLng(a, b);
+	var myOptions = {
+			zoom: 16,
+			center: latlng,
+			mapTypeControl: false,
+			navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL},
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	
+	var mapView = document.getElementById("mapView");
+	mapView.style.width = $(window).width() - 30 + "px";
+	mapView.style.height = $(window).height() - 100 + "px";
+	
+	var map = new google.maps.Map(mapView, myOptions);
+	var marker = new google.maps.Marker({
+		position: latlng,
+		map: map
+	});
+
+}
+
+</script>
+<script src="/rad/resources/jquery/jquery-1.11.2.js"></script>
+<script src="/rad/resources/jquerymobile/jquery.mobile-1.4.5.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+
+</body>
+</html>
