@@ -284,44 +284,6 @@
 			<artifactId>poi</artifactId>
 			<version>${poi.version}</version>
 		</dependency>
-		
-		<!-- for OLI -->
-		<dependency>
-			<groupId>com.celizion.mers</groupId>
-			<artifactId>mers_oli_lib</artifactId>
-			<version>1.0</version>
-		</dependency>
-		
-		<!-- for OLI INI -->
-		<dependency>
-			<groupId>com.celizion.inicryp</groupId>
-			<artifactId>INICrypto_v3.1.6</artifactId>
-			<version>1.0</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.celizion.inilog</groupId>
-			<artifactId>INILog4J_v1.0.1</artifactId>
-			<version>1.0</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.celizion.iniplug</groupId>
-			<artifactId>INIPlugin4Java</artifactId>
-			<version>1.0</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.celizion.inisafe</groupId>
-			<artifactId>INISAFENet_v6.1.8</artifactId>
-			<version>1.0</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.celizion.initool</groupId>
-			<artifactId>INITools</artifactId>
-			<version>1.0</version>
-		</dependency>
 	
 	</dependencies>
 	
