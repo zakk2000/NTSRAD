@@ -289,7 +289,7 @@
 	
     <build>
     	
-    	<finalName>hps</finalName>
+    	<finalName>spring4PoC</finalName>
     	
         <plugins>
         	
