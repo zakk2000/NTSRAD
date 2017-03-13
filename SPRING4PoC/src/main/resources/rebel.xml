@@ -8,6 +8,11 @@
 
 	<web>
 		<link target="/">
+			<dir name="C:/Users/NamTS/git/NTSRAD/SPRING4PoC/target/m2e-wtp/web-resources">
+				<exclude name="/"/>
+			</dir>
+		</link>
+		<link target="/">
 			<dir name="C:/Users/NamTS/git/NTSRAD/SPRING4PoC/src/main/webapp">
 			</dir>
 		</link>

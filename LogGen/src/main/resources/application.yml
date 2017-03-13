@@ -1,0 +1,22 @@
+spring:
+  profiles: logging-realtime
+logging:
+  file: app_realtime.log
+  level:
+    com.nts.bigdata: INFO
+
+---
+
+spring:
+  profiles: logging-batched
+logging:
+  file: app_batched.log
+  level:
+    com.nts.bigdata: INFO
+
+---
+
+spring:
+  profiles: logging-daily
+logging:
+  config: classpath:logback-spring.xml

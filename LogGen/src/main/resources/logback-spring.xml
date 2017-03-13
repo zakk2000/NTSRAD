@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/base.xml"/>
+	
+	<property name="LOGS_HOME" value="LOGS" />
+	<property name="REALTIME_LOG_FILE" value="${LOGS_HOME}/REALTIME-LOG/app_realtime.log" />
+	<property name="BATCHED_LOG_FILE_NAME" value="${LOGS_HOME}/app_batched" />
+	
+	<appender name="REALTIME_LOG" class="ch.qos.logback.core.FileAppender">
+		<prudent>true</prudent>
+		<file>${REALTIME_LOG_FILE}</file>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>INFO</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<encoder>
+			<pattern>%msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="BATCHED_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>true</prudent>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${BATCHED_LOG_FILE_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>INFO</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<encoder>
+			<pattern>%msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<logger name="com.nts.bigdata.sche.RealTimeLogScheduledTask" level="INFO">
+		<appender-ref ref="REALTIME_LOG" />
+	</logger>
+	
+	<logger name="com.nts.bigdata.sche.BatchedLogScheduledTask" level="INFO">
+		<appender-ref ref="BATCHED_LOG" />
+	</logger>
+	
+	<!-- <root level="DEBUG">
+		<appender-ref ref="DEBUG_LOG" />
+	</root> -->
+</configuration>
