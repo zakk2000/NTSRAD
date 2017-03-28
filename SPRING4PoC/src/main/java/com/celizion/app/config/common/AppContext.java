@@ -17,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -39,7 +40,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @Configuration
 @MapperScan("com.celizion.app.mapper")
 @EnableTransactionManagement
-@ComponentScan(basePackages = {"com.celizion.app.service", "com.celizion.app.config.security"}, useDefaultFilters = false, includeFilters = {@Filter(Service.class), @Filter(Configuration.class)})
+@ComponentScan(basePackages = {"com.celizion.app.service", "com.celizion.app.config.security", "com.celizion.app.util"}, useDefaultFilters = false, includeFilters = {@Filter(Service.class), @Filter(Configuration.class), @Filter(Component.class)})
 public class AppContext extends WebMvcConfigurerAdapter implements TransactionManagementConfigurer {
 	
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());

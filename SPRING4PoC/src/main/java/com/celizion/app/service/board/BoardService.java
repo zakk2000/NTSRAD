@@ -3,6 +3,7 @@ package com.celizion.app.service.board;
 import java.util.List;
 
 import com.celizion.app.model.board.Board;
+import com.celizion.app.util.PageNavigation;
 
 /**
  * <pre>
@@ -15,6 +16,7 @@ import com.celizion.app.model.board.Board;
  */
 public interface BoardService {
 
-	List<Board> getBoardList(Board board);
+	List<Board> getBoardList(Board board, PageNavigation pageNavigation);
+	int countBoardList(Board board);
 
 }

@@ -24,6 +24,7 @@ public class PropertySourcesPlaceholderConfig {
 		PropertySourcesPlaceholderConfigurer props = new PropertySourcesPlaceholderConfigurer();
 		props.setLocations(new Resource[] {
 				new ClassPathResource("/config/jdbc.properties")
+				, new ClassPathResource("/config/conf.properties")
 		});
 		
 		return props;

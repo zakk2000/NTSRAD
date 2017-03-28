@@ -14,6 +14,8 @@
 			
 			<form id="searchFrm" name="searchFrm" role="form">
 			
+			<input type="hidden" id="currPageNo" name="currPageNo" value="${(currPageNo ne null) ? currPageNo : 1}" />
+			
 			<div class="col-lg-5">
 				<div class="col-lg-6">
 					<div class="form-group">
@@ -85,6 +87,9 @@
 				</table>
 			</div>
 		</div>
+		
+		<div id="pageNavBar" class="col-lg-12">
+		</div>
 	</div>
 </div>
 
@@ -97,10 +102,10 @@ if(!DEBUG_MODE) {
 
 }
 
-var srchFromYMDHM = '';
-var srchToYMDHM = '';
-var searchType = '';
-var searchStr = '';
+var srchFromYMDHM;
+var srchToYMDHM;
+var searchType;
+var searchStr;
 
 $(function() {
 	
@@ -123,33 +128,40 @@ $(function() {
 		$('#datetimepickerFrom').data("DateTimePicker").maxDate(e.date);
 	});
 	
-	getBoardList();
+	getBoardList(1);
 
 });
 
 var listData;
 $('#searchBtn').on('click', function(event) {
 	
-	srchFromYMDHM = (!isNaN(moment($('#srchFromYMDHM').val(), 'YYYYMMDD HHmm').format('YYYYMMDDHHmm'))) ? moment($('#srchFromYMDHM').val(), 'YYYYMMDD HHmm').format('YYYYMMDDHHmm') : '';
-	srchToYMDHM = (!isNaN(moment($('#srchToYMDHM').val(), 'YYYYMMDD HHmm').format('YYYYMMDDHHmm'))) ? moment($('#srchToYMDHM').val(), 'YYYYMMDD HHmm').format('YYYYMMDDHHmm') : '';
-	console.log('srchFromYMDHM >>>>>>>>>>>>>>',srchFromYMDHM,'****srchToYMDHM >>>>>>>>>>>>>>',srchToYMDHM,'****');
-	searchType = $('#searchType').val();
-	searchStr = $('#searchStr').val();
-	
-	getBoardList();
+	getBoardList(1);
 	
 	event.preventDefault();
 
 });
 
-function getBoardList() {
+function setSearchCondition() {
 	
-	console.log('srchFromYMDHM >>>>>>>>>>>>>>',srchFromYMDHM,'||||srchToYMDHM >>>>>>>>>>>>>>',srchToYMDHM,'||||');
-	var reqUrl = '<c:url value="/rest/board/" />' + srchFromYMDHM + '/' + srchToYMDHM + '/' + searchType + '/' + searchStr;
+	srchFromYMDHM = (!isNaN(moment($('#srchFromYMDHM').val(), 'YYYYMMDD HHmm').format('YYYYMMDDHHmm'))) ? moment($('#srchFromYMDHM').val(), 'YYYYMMDD HHmm').format('YYYYMMDDHHmm') : '0';
+	srchToYMDHM = (!isNaN(moment($('#srchToYMDHM').val(), 'YYYYMMDD HHmm').format('YYYYMMDDHHmm'))) ? moment($('#srchToYMDHM').val(), 'YYYYMMDD HHmm').format('YYYYMMDDHHmm') : '0';
+	searchType = $('#searchType').val();
+	searchStr = $('#searchStr').val();
+
+}
+
+function getBoardList(pageNo) {
+	
+	setSearchCondition();
+	
+	var reqUrl = '<c:url value="/rest/board/" />' + pageNo + '/' + srchFromYMDHM + '/' + srchToYMDHM + '/' + searchType + '/' + searchStr;
 	$.getJSON(reqUrl, function(resData) {
 		
-		listData = resData;
+		listData = resData.list;
 		showResult();
+		
+		$('#pageNavBar').empty();
+		$('#pageNavBar').append(resData.pageBar);
 		
 		if(resData.length > 0) {
 			
@@ -188,6 +200,8 @@ function showResult() {
 
 $('#exportExcel').on('click', function(event) {
 	
+	setSearchCondition();
+	
 	/* if(posResult !== undefined && posResult.length > 0 && !$(this).hasClass('disabled')) {
 		
 		$(this).addClass('disabled');
@@ -206,6 +220,19 @@ $('#resetBtn').on('click', function(event) {
 	$('#searchFrm').find('input, select').val('');
 	
 	event.preventDefault();
+
+});
+
+$('#pageNavBar').on('click', '#btnFirst, #btnPrev, button[name=btnPage], #btnNext, #btnLast',function(event) {
+	
+	var pageVal = $(this).attr('data-page');
+	var currPageVal = $('#currPageNo').val();
+	if(pageVal != currPageVal) {
+		
+		$('#currPageNo').val(pageVal);
+		getBoardList(pageVal);
+	
+	}
 
 });
 

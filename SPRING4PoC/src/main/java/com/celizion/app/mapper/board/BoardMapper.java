@@ -1,6 +1,7 @@
 package com.celizion.app.mapper.board;
 
 import java.util.List;
+import java.util.Map;
 
 import com.celizion.app.model.board.Board;
 
@@ -15,6 +16,7 @@ import com.celizion.app.model.board.Board;
  */
 public interface BoardMapper {
 
-	List<Board> selectBoardList(Board board);
+	List<Board> selectBoardList(Map<String, Object> map);
+	int selectCountBoardList(Board board);
 
 }

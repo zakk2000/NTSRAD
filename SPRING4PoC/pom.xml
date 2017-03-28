@@ -28,7 +28,6 @@
 		<!-- for Logging(logback based on slf4j) -->
 		<org.slf4j-version>1.7.12</org.slf4j-version>
 		<logback.version>1.1.3</logback.version>
-		<log4j.version>1.2.17</log4j.version>
 		
 		<!-- for MyBatis & Spring linkage -->
 		<mybatis.version>3.3.0</mybatis.version>
@@ -164,12 +163,6 @@
 			<artifactId>logback-classic</artifactId>
 			<version>${logback.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>${log4j.version}</version>
-		</dependency>
-		
 		
 		<!-- for MyBatis & Spring linkage -->
 		<dependency>
