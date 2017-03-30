@@ -17,6 +17,7 @@ import com.celizion.app.model.common.CommonModel;
 public class Board extends CommonModel {
 
 	private long seq;
+	private long rownum;
 	private String title;
 	private String cont;
 	private String createDate;
@@ -34,6 +35,12 @@ public class Board extends CommonModel {
 	}
 	public void setSeq(long seq) {
 		this.seq = seq;
+	}
+	public long getRownum() {
+		return rownum;
+	}
+	public void setRownum(long rownum) {
+		this.rownum = rownum;
 	}
 	public String getTitle() {
 		return title;

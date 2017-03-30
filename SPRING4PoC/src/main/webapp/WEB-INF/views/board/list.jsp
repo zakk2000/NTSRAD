@@ -135,6 +135,8 @@ $(function() {
 var listData;
 $('#searchBtn').on('click', function(event) {
 	
+	$('#currPageNo').val(1);
+	
 	getBoardList(1);
 	
 	event.preventDefault();
@@ -158,6 +160,7 @@ function getBoardList(pageNo) {
 	$.getJSON(reqUrl, function(resData) {
 		
 		listData = resData.list;
+		console.log(listData);
 		showResult();
 		
 		$('#pageNavBar').empty();
@@ -186,7 +189,7 @@ function showResult() {
 	$.each(listData, function(i, col) {
 		
 		var posResultStr = '<tr class="table-row-on">' +
-						   '<td class="col-md-1">' + col.seq + '</td>' +
+						   '<td class="col-md-1">' + col.rownum + '</td>' +
 						   '<td class="col-md-8">' + col.title + '<input type="hidden" name="seq" value="' + col.seq + '" /></td>' +
 						   '<td class="col-md-1">' + col.createdBy + '</td>' +
 						   '<td class="col-md-2">' + col.createDate + '</td>' +

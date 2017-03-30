@@ -33,6 +33,9 @@
 			<li${currURL eq '/index.app' ? ' class="active"' : ''}>
 				<a href="<c:url value="/index.app" />"><i class="fa fa-fw fa-table"></i> <spring:message code="menu.dashboard.table" /></a>
 			</li>
+			<li${currURL eq '/search.app' ? ' class="active"' : ''}>
+				<a href="<c:url value="/search.app" />"><i class="fa fa-fw fa-edit"></i> <spring:message code="menu.dashboard.search" /></a>
+			</li>
 		</ul>
 	</div>
 </nav>

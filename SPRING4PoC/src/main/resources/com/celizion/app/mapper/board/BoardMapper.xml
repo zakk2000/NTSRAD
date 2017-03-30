@@ -8,7 +8,9 @@
 				, TITLE
 				, CREATED_BY
 				, DATE_FORMAT(CREATE_DATE, '%Y-%m-%d %H:%i:%s') CREATE_DATE
+				, @ROWNUM := @ROWNUM + 1 ROWNUM
 		FROM BOARD
+			 , (SELECT @ROWNUM := 0) R
 		WHERE 1 = 1
 		<if test='srchFromYMDHM != null and srchFromYMDHM != "0" and srchToYMDHM != null and srchToYMDHM != "0"'>
 			AND CREATE_DATE BETWEEN STR_TO_DATE(#{srchFromYMDHM, jdbcType=VARCHAR}, '%Y%m%d%H%i%s')
@@ -31,7 +33,7 @@
 				</when>
 			</choose>
 		</if>
-		ORDER BY SEQ DESC
+		ORDER BY ROWNUM DESC
 		LIMIT #{startOffset, jdbcType=NUMERIC}, #{pageListRowLimit, jdbcType=NUMERIC}
 	</select>
 	
