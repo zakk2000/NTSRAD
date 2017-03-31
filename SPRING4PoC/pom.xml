@@ -94,6 +94,13 @@
 			</exclusions>
 		</dependency>
 		
+		<!-- for Spring JDBC Driver -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>${org.springframework-version}</version>
+		</dependency>
+		
 		<!-- for SpringSecurity -->
 		<dependency>
 		    <groupId>org.springframework.security</groupId>

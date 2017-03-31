@@ -16,8 +16,8 @@
 				<form id="searchFrm" name="searchFrm" role="form">
 				
 				<div class="form-group input-group">
-					<input type="text" id="searchStr" name="searchStr" placeholder="<spring:message code="label.form.input.search" />" class="form-control">
-					<span class="input-group-btn"><button id="searchBtn" class="btn btn-default" type="button"><i class="fa fa-search"></i></button></span>
+					<input type="text" id="searchStr" name="searchStr" placeholder="<spring:message code="label.form.input.search" />" autofocus class="form-control" />
+					<span class="input-group-btn"><button id="searchBtn" class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></span>
 				</div>
 				
 				</form>

@@ -62,7 +62,7 @@ public class SphinxDataSource {
 	}
 	
 	@Bean
-	public JdbcTemplate jdbcTemplate() {
+	public JdbcTemplate searchEngineJdbcTemplate() {
 		
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(searchEngineDataSource());
 		jdbcTemplate.setResultsMapCaseInsensitive(true);

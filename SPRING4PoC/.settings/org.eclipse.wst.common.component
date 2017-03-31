@@ -4,8 +4,8 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <property name="context-root" value="hps"/>
         <property name="java-output-path" value="/SPRING4PoC/target/classes"/>
         <property name="component.exclusion.patterns" value="**/rebel.xml"/>
+        <property name="context-root" value="spring4PoC"/>
     </wb-module>
 </project-modules>
